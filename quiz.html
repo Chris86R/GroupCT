@@ -1,0 +1,93 @@
+<!doctype html>
+<html>
+
+<head>
+	<title>Document</title>
+</head>
+
+<body>
+		<div class="correct">
+			<h1>What's Black panthers real name?</h1>
+			<label><input type="radio" name="q1" value="Shuri">Shuri</label>
+			<label><input type="radio" name="q1" value="TChalla">T' Challa</label>
+			<label><input type="radio" name="q1" value="Stan Lee">Stan Lee</label>
+			<br>
+			<button class="button">Next</button>
+		</div>
+		<div class="score2" style="display: none">
+			<h1>Black Panther is known to be the protector of the _________ nation:</h1>
+			<label><input type="radio" name="q2" value="New Jersey">Watagatapitsu </label>
+			<label><input type="radio" name="q2" value="New York"> Wanda</label>
+			<label><input type="radio" name="q2" value="Wakanda">Wakanda </label>
+			<br>
+			<button class="button">Next</button>
+		</div>
+		<div class="score3" style="display: none">
+			<h1>What is Captain america's second name?</h1>
+			<label><input type="radio" name="q3" value="The Nomad">The Nomad </label>
+			<label><input type="radio" name="q3" value="Chris Helmsworth"> Chris Helmsworth</label>
+			<label><input type="radio" name="q3" value="Steve Rogers">Steve Rogers </label>
+			<br>
+			<button id="finalButton">Finish</button>
+		</div>
+		<div style="display: none">
+			<h1>Score: </h1>
+		</div>
+
+	<script>
+		
+					
+		var panther ="TChalla";
+		var panther2 ="Wakanda";
+		var panther3 = "The Nomad";
+		var x = 0;
+	
+	var button = document.getElementsByTagName('button');
+
+            for(i=0; i<button.length; i++) {
+
+                button[i].onclick = function() {
+
+                    this.parentElement.style.display = 'none';
+
+                    this.parentElement.nextElementSibling.style.display = 'block';
+				}
+				
+			}
+		
+		document.getElementById('finalButton').onclick = function() {
+			
+			this.parentElement.style.display = 'none';
+
+                    this.parentElement.nextElementSibling.style.display = 'block';
+		
+		var one = document.querySelector('input[name="q1"]:checked').value;
+
+		var two = document.querySelector('input[name="q2"]:checked').value;
+		
+		var three = document.querySelector('input[name="q3"]:checked').value;
+										   
+		if  (one==panther) {
+		x++;
+		}
+			
+		if (two==panther2) {
+		x++;
+		}
+			
+		if  (three==panther3) {
+		x++;
+		}
+			
+			console.log(x)
+			
+		}
+		
+		
+
+			
+
+	</script>
+</body>
+
+</html>
